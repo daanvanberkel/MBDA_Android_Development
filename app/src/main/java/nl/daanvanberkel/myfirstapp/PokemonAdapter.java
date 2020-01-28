@@ -3,9 +3,7 @@ package nl.daanvanberkel.myfirstapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,11 +29,8 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull PokemonViewHolder holder, int position) {
-        ImageView imageView = (ImageView) holder.layout.getChildAt(0);
-        imageView.setImageDrawable(dataset[position].image);
-
-        TextView textView = (TextView) holder.layout.getChildAt(1);
-        textView.setText(dataset[position].name);
+        holder.imageView.setImageDrawable(dataset[position].image);
+        holder.textView.setText(dataset[position].name);
     }
 
     @Override

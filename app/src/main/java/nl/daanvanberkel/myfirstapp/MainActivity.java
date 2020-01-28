@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         final PokemonAdapter adapter = new PokemonAdapter(pokemons);
+
         adapter.setOnItemClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
